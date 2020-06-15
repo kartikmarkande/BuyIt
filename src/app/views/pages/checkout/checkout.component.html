@@ -1,0 +1,99 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <app-header></app-header>
+        </div>
+    </div>
+    <div class="row maindiv">
+        <div class="col-md-12">
+            <div class="col-md-12 ">
+                <h3 class="card-title">Dummy Checkout Page</h3>
+            </div>
+            <div class="col-md-12 ">
+                <h5 class="card-title"><span
+                        class="card-subtitle fstitle text-capitalize ff-sans">{{cartItems?.length}}
+                        items Selected</span> </h5>
+            </div>
+            <div class="col-md-12 mt-3 row" *ngIf="cartItems?.length == 0">
+                <div class="col-md-2"></div>
+                <div class="card col-md-8 mt-5">
+                    <div class="card-body pl-3 pt-5 pb-5">
+                        <h5>
+                            <i class="icon ion-ios-cart"></i> Your Cart is empty
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div class="card"
+                *ngFor="let cart of cartItems">
+                <div class="card-body p-3">
+                    <div class="col-md-12 row">
+                        <div class="col-md-2">
+                            <div class="col-md-12 row">
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-10">
+                                    <img class="w-100 imageHeight"
+                                        src="{{cart?.image}}" />
+                                </div>
+                                <!-- <div class="col-md-10"
+                                    *ngIf="cart.Product_Images.length === 0">
+                                    <img class="w-100 imageHeight"
+                                        src="assets/images/default_image.png" />
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <div class="col-md-10">
+                            <div class="col-md-12 row">
+                                <div class="col-md-9">
+                                    <h4 class="">
+                                        <a>
+                                            {{cart?.name}}</a>
+                                    </h4>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4
+                                        class="text-right">
+                                        ${{cart?.price | number:'1.2-2'}} / item
+                                    </h4>
+                                    <div class='totalPrice'>
+                                        <span>{{totalPrice}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!---row2-->
+                            <div class="col-md-12 row">
+                                <div class="col-md-7">
+                                    <label
+                                        class="col-md-5 p-0">
+                                        <span>
+                                            <i title="Edit"
+                                                (click)="editProdfromCart(cart)"
+                                                class="onhoverpt icon ion-edit"></i></span>
+                                        No. of Devices
+                                        <span>{{cart?.quantity}}</span>
+                                        <input
+                                            type="number"
+                                            class="form-control quantitysel p-0"
+                                            id="PurchaseunitNumber"
+                                            min="0"
+                                            max = "{{cart.quantity}}"
+                                            (ngModelChange)="validateQuantity(cart)"
+                                            (blur)="buyingCount(cart)"
+                                            (keypress)="keyPressed(cart, $event)">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>

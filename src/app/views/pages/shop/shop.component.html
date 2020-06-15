@@ -1,0 +1,63 @@
+
+<div class="conainer-fluid">
+    <div class="row">
+        <div class="col-12">
+            <app-header></app-header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div id="scrolltotop"></div>
+
+            <div class="row producList">
+                <div class="col-md-12 col-12 text-center" *ngIf="updatedProdLists?.length==0">
+                    <!-- <img class="w-15-p" style="height:200px"
+                        src="https://cdn0.iconfinder.com/static/img/illustrations/blueprint.svg?be26cbd91e"> -->
+                    <h2 class="m-8"> No products found</h2>
+                </div>
+                <div class="col-md-12 col-12 text-center" *ngIf="updatedProdLists?.length>0">
+                    <h3>Products</h3>
+                </div>
+                <div class="col-1" *ngIf="updatedProdLists?.length>1"></div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-10" *ngIf="updatedProdLists?.length>1">
+                    <div class="card productCard cursorHand" *ngFor="let product of updatedProdLists" >
+                        <div class="row">
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                <div class="imageContainer">
+                                    <img class="imagStyle" src="{{product?.image}}"
+                                        *ngIf="product?.image != undefined">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 infoContainer">
+                                <div class="infocontainer">
+                                    <div class="productName">
+                                        <span>{{product?.name}}</span>
+                                    </div>
+                                    <div class="productDescription">
+                                        <span>{{product?.description}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                                <div class="priceListing">
+                                    <div><span>${{product?.price}}</span></div>
+                                    <div>
+                                        <button class="btn btn-sm btn-primary btn-lk-login" (click)="addToCart(product)">
+                                            <a routerLinkActive="active">Add to cart</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <app-footer></app-footer>
+        </div>
+    </div>
+</div>
+

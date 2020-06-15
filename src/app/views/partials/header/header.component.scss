@@ -1,0 +1,39 @@
+app-header{
+    .cartImage{
+      width: 6%;
+      &:hover{
+        cursor: pointer !important;
+      }
+      @media only screen and (max-width: 415px){
+            width: 30%;
+        }
+        @media only screen and (min-width:416px) and (max-width: 767px){
+            width: 18%;
+        }
+    }
+
+    .cartItem{
+      width: 6%;
+      outline: 0px;
+       &:hover{
+        cursor: pointer !important;
+       }
+       @media only screen and (max-width: 415px){
+            width: 30%;
+        }
+        @media only screen and (min-width:416px) and (max-width: 767px){
+            width: 18%;
+        }
+    }
+
+    .text-end{
+      text-align: end;
+    }
+    .badgeClass{
+      margin-bottom: auto;
+      position: absolute;
+      right: 0px !important;
+      font-size: 10px;
+    }
+}
+

@@ -1,0 +1,57 @@
+app-shop{
+
+    .imagStyle{
+        width: 100% !important;
+        @media only screen and (max-width: 767px){
+            width: auto !important;
+        }
+    }
+    .imageContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 23vh;
+        padding: 15px !important;
+        @media only screen and (max-width: 767px){
+            height: auto;
+        }
+    }
+
+    .producList{
+        margin-top: 3.2rem;
+    }
+
+    .infocontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 22vh;
+        flex-direction: column;
+        text-align: justify;
+        padding: 0.5rem;
+        @media only screen and (max-width: 767px){
+             height: auto;
+        }
+    }
+
+    .priceListing{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 23vh;
+        flex-direction: column;
+        @media only screen and (max-width: 767px){
+            height: 15vh;
+        }
+    }
+
+    .productCard{
+        margin-bottom: 1rem;
+        background: #f9f9f9;
+    }
+
+    .selectQuantity{
+        width: 60%;
+    }
+}
+
