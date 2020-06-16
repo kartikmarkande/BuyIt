@@ -2,7 +2,7 @@
 To install the nvm 10.9.0, command is 'nvm install 10.9.0'. After install, use it 'nvm use 10.9.0'.
 
 # After cloning - install 
-After cloning, you will get BuyIt folder, go inside it(cd BuyIt). Then use command 'npm insatll --save'. Once installation finishes, serve with 'ng serve'.
+After cloning, you will get BuyIt folder, go inside it(cd BuyIt). Then use command 'npm install --save'. Once installation finishes, serve with 'ng serve'.
 
 # BuyIt
 
