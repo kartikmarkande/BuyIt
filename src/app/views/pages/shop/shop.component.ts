@@ -15,6 +15,7 @@ export class ShopComponent implements OnInit {
 
   /* import the product model to check wiht*/
   updatedProdLists: Product[] = [];
+  loading = false;
   ngOnInit() {
     this.getProducts();
   }
@@ -29,11 +30,25 @@ export class ShopComponent implements OnInit {
       productlists.forEach(element => {
         self.updatedProdLists.push(element);
       });
+      self.loading = true;
     })
   }
 
   /* To add the products to cart */
   addToCart(product){
     this._eventService.updateCart(product);
+  }
+
+  /**
+	 * @description Sets the height based on the window screen
+	 *
+	 *  */
+  setMapHeight(): string {
+    let mapHeight = window.innerHeight * 0.677;
+    if (window.innerWidth < 768) {
+      return 'auto';
+    } else {
+      return mapHeight + 'px';
+    }
   }
 }

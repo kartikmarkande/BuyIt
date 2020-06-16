@@ -10,16 +10,17 @@
             <div id="scrolltotop"></div>
 
             <div class="row producList">
-                <div class="col-md-12 col-12 text-center" *ngIf="updatedProdLists?.length==0">
-                    <!-- <img class="w-15-p" style="height:200px"
-                        src="https://cdn0.iconfinder.com/static/img/illustrations/blueprint.svg?be26cbd91e"> -->
+                <div class="col-md-12 col-12 text-center message-div" [hidden]="loading" [ngStyle]="{ 'height': setMapHeight()}">
+                    <h2 class="m-8"> Fetching products... </h2>
+                </div>
+                <div class="col-md-12 col-12 text-center message-div" [hidden]="!(updatedProdLists?.length==0 && loading == true)" [ngStyle]="{ 'height': setMapHeight()}">
                     <h2 class="m-8"> No products found</h2>
                 </div>
-                <div class="col-md-12 col-12 text-center" *ngIf="updatedProdLists?.length>0">
+                <div class="col-md-12 col-12 text-center" [hidden]="!(updatedProdLists?.length>0)">
                     <h3>Products</h3>
                 </div>
-                <div class="col-1" *ngIf="updatedProdLists?.length>1"></div>
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-10" *ngIf="updatedProdLists?.length>1">
+                <div class="col-1" *ngIf="updatedProdLists?.length>0"></div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-10" *ngIf="updatedProdLists?.length>0">
                     <div class="card productCard cursorHand" *ngFor="let product of updatedProdLists" >
                         <div class="row">
                             <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
