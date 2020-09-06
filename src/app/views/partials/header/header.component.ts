@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { EventsService } from "../../../services/events/events.service";
 
 @Component({

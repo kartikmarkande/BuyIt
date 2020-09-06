@@ -23,13 +23,13 @@
                 <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 col-10" *ngIf="updatedProdLists?.length>0">
                     <div class="card productCard cursorHand" *ngFor="let product of updatedProdLists" >
                         <div class="row">
-                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                            <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                                 <div class="imageContainer">
                                     <img class="imagStyle" src="{{product?.image}}"
                                         *ngIf="product?.image != undefined">
                                 </div>
                             </div>
-                            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 infoContainer">
+                            <div class="col-lg-8 col-md-6 col-sm-12 col-xs-12 infoContainer">
                                 <div class="infocontainer">
                                     <div class="productName">
                                         <span>{{product?.name}}</span>
@@ -39,7 +39,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                            <div class="col-lg-2 col-md-3 col-sm-12 col-xs-12">
                                 <div class="priceListing">
                                     <div><span>${{product?.price}}</span></div>
                                     <div>

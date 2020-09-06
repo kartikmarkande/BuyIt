@@ -3,14 +3,14 @@
         <div class="row align-items-center w-100">
             <div class="col-6">
                 <div class="justify-content-start">
-                    <img src="assets/images/buyit.svg" class="cartImage" alt="" [routerLink]="['/']">
+                    <img src="assets/images/buy-com.png" class="cartImage" alt="" [routerLink]="['/']">
                 </div>
             </div>
             <div class="col-6">
                 <div class="justify-content-end">
                     <ul class="navbar-nav mt-2 mt-lg-0 lk-top-menu ">
-                        <li class="nav-item btn-lk-login-pdng justify-content-end text-end">
-                            <img src="assets/images/cart.svg" class="cartItem " alt="" [routerLink]="['/checkout']">
+                        <li class="nav-item w-100 btn-lk-login-pdng justify-content-end text-end">
+                            <img src="assets/images/cart-image.png" class="cartItem " alt="" [routerLink]="['/checkout']">
                             <span class="badgeClass badge badge-success" [hidden]="cartItemsCount == 0">{{cartItemsCount}}</span>
                         </li>
                     </ul>

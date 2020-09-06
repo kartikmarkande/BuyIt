@@ -5,15 +5,16 @@ app-header{
         cursor: pointer !important;
       }
       @media only screen and (max-width: 415px){
-            width: 30%;
+            width: 24%;
         }
         @media only screen and (min-width:416px) and (max-width: 767px){
             width: 18%;
         }
+        outline: none !important;
     }
 
     .cartItem{
-      width: 6%;
+      width: 5%;
       outline: 0px;
        &:hover{
         cursor: pointer !important;
